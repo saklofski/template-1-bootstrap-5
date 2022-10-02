@@ -1,0 +1,525 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Strat navbar */
+
+.navbar {
+    background-color: #19283F;
+}
+
+
+.navbar .navbar-nav .nav-item .nav-link {
+    color: #FFFFFF;
+    margin: 0 8px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link:focus {
+    color: #33D1CC;
+}
+
+.navbar .search {
+    color: #33D1CC; 
+    padding-left: 20px;
+}
+
+@media (max-width: 991.20px) {
+    .navbar .search {
+        display: none;
+    }
+}
+
+.navbar .login {
+    color: #FFC400;
+    background-color: #FF3150;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.navbar .login::before {
+    content: '';
+    border-left: 1px solid #33D1CC;
+    height: 65%;
+    position: absolute;
+    left: -53px;
+    top: 8px;
+}
+
+@media (max-width: 991.20px) {
+    .navbar .login{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991.20px) {
+    .navbar .login::before {
+        display: none;
+    }
+}
+
+/* End navbar */
+
+/* Strat Header */
+
+.header {
+    background-color: #19283F;
+    min-height: 100vh;
+}
+
+.header .intro {
+    padding-top: calc(50vh - 70px);
+}
+
+.header .intro .titre {
+    color: white;
+}
+
+.header .intro .para {
+    color: #8C949F;
+}
+
+.header .intro .get {
+    color: #FFC400;
+    background-color: #FF3150;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-top: 25px;
+}
+
+/* End Header */
+
+/* Start good */
+
+.good {
+    padding: 100px 0;
+}
+
+.good .par {
+    color: #7F7F7F;
+    font-weight: 400;
+    position: relative;
+}
+
+.good .par::after {
+    content: '';
+    width: 127px;
+    height: 3px;
+    background-color: #33D1CC;
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 50px;
+}
+
+.good .number {
+    font-size: 200px;
+    color: #EFF7FA;
+}
+
+.good .design1 {
+    color: #FFC400;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.good .design1::before {
+    font-family: 'Font Awesome 6 Free';
+    content: '\f303';
+    font-weight: 900;
+    color: #33D1CC;
+    font-size: 70px;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.good .design2 {
+    color: #FFC400;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.good .design2::before {
+    font-family: 'Font Awesome 6 Free';
+    content: '\f390';
+    font-weight: 900;
+    color: #33D1CC;
+    font-size: 70px;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.good .design3 {
+    color: #FFC400;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.good .design3::before {
+    font-family: 'Font Awesome 6 Free';
+    content: '\f1e6';
+    font-weight: 900;
+    color: #33D1CC;
+    font-size: 70px;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.good .leade {
+    color: #7F7F7F;
+    line-height: 2;
+}
+
+/* End good */
+
+/* Start porftolfio */
+
+.portfolio {
+    padding: 100px 0 0 0;
+    background-color: #EFF7FA;
+}
+
+.portfolio .par {
+    color: #7F7F7F;
+    font-weight: 400;
+    position: relative;
+}
+
+.portfolio .par::after {
+    content: '';
+    width: 127px;
+    height: 3px;
+    background-color: #33D1CC;
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 50px;
+}
+
+.portfolio .list-group-horizontal {
+    margin-bottom: 80px;
+}
+
+.portfolio .list-group-horizontal .list-group-item {
+    background-color: transparent; 
+    border:none;
+    cursor: pointer;
+}
+
+.portfolio .list-group-horizontal .list-group-item:hover {
+    color: #FF3150;
+}
+
+.portfolio .list-group-horizontal .list-group-item:first-child:not(:last-child) {
+    background-color: #FF3150;
+    color: #FFC400;
+    border-radius: 25px;
+}
+
+.portfolio .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background: #33D1CC;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 30px;
+    transform: translateX( calc(-100% - 5px) );
+    opacity: 0.8;
+}
+
+.portfolio .box:hover:before {
+    transform: translateX(0);
+}
+
+.portfolio .get-port {
+    color: #FFC400;
+    background-color: #FF3150;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+
+/* End porftolio */
+
+/* Strat About Us */
+
+.About-Us {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.About-Us .par {
+    color: #7F7F7F;
+    font-weight: 400;
+    position: relative;
+}
+
+.About-Us .par::after {
+    content: '';
+    width: 127px;
+    height: 3px;
+    background-color: #33D1CC;
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 50px;
+}
+
+.About-Us .para {
+    max-width: 500px;
+    margin: -10px auto;
+    color: #7F7F7F;
+}
+
+.About-Us .box1 {
+    margin-top: 60px;
+}
+
+.About-Us .box1 .textes {
+    line-height: 1.6;
+    color: #7F7F7F;
+}
+
+.About-Us .box1 .btn-about-us {
+    color: #FFC400;
+    background-color: #FF3150;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Start About Us */
+
+/* Strat team */
+
+.team {
+    padding: 100px 0 100px 0;
+    background-color: #EFF7FA;
+}
+
+.team .text-team {
+    color: #FFC400;
+    font-weight: bold;
+}
+
+.team .para-team {
+    color: #7F7F7F;
+}
+
+.team .card {
+    margin-bottom: 20px;
+}
+
+.team .card .card-body {
+    padding: 0;
+}
+
+.team .card .card-body .card-title {
+    background-color: #33D1CC;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 15px 0;
+    margin-bottom: 0;
+}
+
+.team .card .card-body .card-text {
+    color: #7F7F7F;
+    padding: 15px 16px;
+}
+
+/* End team */
+
+/* Strat logo */
+
+.logo {
+    background-color: #ffffff;
+}
+
+/* End logo */
+
+/* Strat project */
+
+.project {
+    background-color: #19283F;
+    padding: 50px 0 100px 0;
+}
+
+.project .text-project {
+    color: #7F7F7F;
+}
+
+.project .btn-project {
+    color: #FFC400;
+    background-color: #FF3150;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* End project */
+
+/* End blog */
+
+.blog {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.blog .par {
+    color: #7F7F7F;
+    font-weight: 400;
+    position: relative;
+}
+
+.blog .boxblog .card {
+    margin-bottom: 20px;
+}
+
+.blog .boxblog .card .card-text {
+    margin-bottom: 0;
+}
+
+.blog .btn-blog  {
+    color: #FFC400;
+    background-color: #FF3150;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* Strat blog */
+
+/* Start Subscribe */
+
+.subscribe {
+    padding: 80px 0;
+    background-color: #FFC400;
+}
+
+.subscribe .box-sub1 .tit-sub {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.subscribe .box-sub2 .email-sub {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-bottom: 1px solid #FFFFFF;
+    border-radius: 0;
+    color: #FFFFFF;
+}
+
+.subscribe .box-sub2 .email-sub::placeholder {
+    color: #FFFFFF;
+}
+
+.subscribe .box-sub3 .btn-sub {
+    color: #FFC400;
+    background-color: #19283F;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+}
+
+/* End Subscribe */
+
+/* Start Footer */
+
+.footer {
+    padding: 100px 0;
+    background-color: #19283F;
+}
+
+.footer .text-footer {
+    color: #7F7F7F;
+    font-size: 16px;
+}
+
+.footer .copyright {
+    color: #7F7F7F;
+}
+
+.footer .copyright .graphberry {
+    color: #33D1CC;
+}
+
+.footer .copyright .bondi {
+    color: #FFC400;
+}
+
+.footer .box-foot2 .title-foo2 {
+    font-size: 25px;
+}
+
+.footer .box-foot2 ul {
+    color: #7F7F7F;
+}
+
+.footer .box-foot2 ul li {
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.footer .box-foot3 .title-foo3 {
+    font-size: 25px;
+}
+
+.footer .box-foot3 ul {
+    color: #7F7F7F;
+}
+
+.footer .box-foot3 ul li {
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+.footer .box-foot4 .title-foo4 {
+    font-size: 25px;
+}
+
+.footer .box-foot4 .text-foo4 {
+    color: #7F7F7F;
+    font-size: 16px;
+    line-height: 2;
+}
+
+.footer .box-foot4 .form-control {
+    border-radius: 25px;
+    background-color: #FF3150;
+    color: #FFC400;
+    border: none;
+}
+
+.footer .box-foot4 .social-icon1 img{
+    padding: 0 10px 0 0 ;
+}
+
+/* End Footer */
